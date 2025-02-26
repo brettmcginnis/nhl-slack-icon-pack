@@ -1,0 +1,11 @@
+name: Pull Request
+
+on:
+  pull_request:
+
+jobs:
+  fmt:
+    uses: ./.github/workflows/fmt.yml
+
+  images:
+    uses: ./.github/workflows/images.yml
