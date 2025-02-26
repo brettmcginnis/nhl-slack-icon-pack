@@ -1,0 +1,12 @@
+name: Main
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  fmt:
+    uses: ./.github/workflows/fmt.yml
+
+  images:
+    uses: ./.github/workflows/images.yml

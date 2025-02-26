@@ -1,0 +1,8 @@
+name: Scheduled Workflow
+on:
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  images:
+    uses: ./.github/workflows/images.yml

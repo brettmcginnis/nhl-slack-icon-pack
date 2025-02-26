@@ -1,0 +1,16 @@
+name: Images
+
+on:
+  workflow_call:
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    container: golang:1.24.0
+    steps:
+      - uses: actions/checkout@v4
+      - run: go run src/main.go
+      - uses: actions/upload-artifact@v4
+        with:
+          name: player_images
+          path: images/**/*.png
